@@ -1,0 +1,214 @@
+﻿body
+{
+  padding: 0px;
+  text-align: center;
+}
+
+#wrapper
+{
+  margin: 0px auto;
+  width: 640px; padding-top: 1.5em;
+}
+
+#content
+{
+  float: right; width: 400px;
+}
+
+#header
+{
+  background: linear-gradient(black, gray);
+  color: White;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+#tetris
+{
+  margin: auto;
+  padding: 0.1em 1em;
+  width: 50%;
+  text-align: center;
+
+  font: oblique bold 32pt Broadway;
+  font-variant:small-caps;
+}
+#scores
+{
+  width: 50%;
+  font-size: 150%;
+  padding: 2%;
+  text-align: right;
+  margin: 0 auto;
+}
+#scores label {
+  text-align: left;
+  float: left;
+}
+
+#information
+{
+  text-align:left;
+  padding: 0.5em;
+  background: linear-gradient(#6395FB, #C2D5FC);
+}
+
+#buttons {
+  margin-top: 1em; margin-bottom: 2em;
+}
+
+#buttons a {
+  margin: 0px 10px; padding: 4px;
+  font-weight: bold;
+  text-decoration:none;
+  border-radius: 4px;
+}
+
+/* Adapted from jquery UI styling. Inlined to save space. */
+#buttons a, #buttons a:link, #button a:visited {
+  border: 1px solid #d3d3d3;
+  background: #e6e6e6;
+
+  color: #555555;
+  text-decoration: none;
+  outline: none;
+}
+
+#keys
+{
+  line-height: 1.75;
+  margin: 0px; padding: 0px;
+  list-style-type: none; list-style-position: inside;
+}
+
+/* The actual keys the use can press, styled to look like keyboard keys */
+#keys em
+{
+  padding: 1px 2px; background-color: #e6e6e6; color: #555555;
+  border: 2px inset Gray;
+  border-radius: 2px;
+}
+
+/* Small blocks at the start of each sentence for a little extra class */
+#keys li { padding-left: 20px; position: relative; }
+#keys .square
+{
+  width: 12px; height: 12px;
+  position: absolute;
+  top:4px; left: 0px;
+
+  border-style: outset;
+  border-width: 2px;
+}
+
+#footer { text-align: center; }
+#vanilla img { display: inline; }
+
+/* These are the individual pieces and sizes for where pieces can go */
+/*    The size of the square is also saved in the JS to dynamically create the grid. */
+/*    Next is also sized based on how big the pieces can be. */
+/*    Refer to the size of the .square style to determine how large each piece will be */
+
+#next-wrapper
+{
+  float: right;
+  margin: 6px;
+  padding: 6px;
+  width: 75px; height: 75px;
+  position: relative;
+
+  background: White;
+  border: 2px inset Gray;
+}
+
+#next
+{
+  margin: 0px; padding: 0px;
+  width: 64px; height: 64px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -32px 0 0 -32px;
+}
+
+#play
+{
+  border: 3px solid black;
+  float: left;
+  position: relative;
+  padding: 1px;
+}
+
+.square
+{
+  width: 14px; height: 14px; /* total size is 16px = 1px border *2 + 14px width */
+  border-style: outset;
+  border-width: 1px;
+}
+
+.gridline
+{
+  background-color: rgba(1,10, 255, 0.3);
+  border: 1px solid Gray;
+  float: left;
+}
+
+/*
+ X
+ X
+ X
+ X
+*/
+
+.stick { background-color: Red; border-color: Red; }
+
+/*
+ X
+ X
+XX
+*/
+
+.revL  { background-color: Fuchsia; border-color: Fuchsia; }
+
+/*
+X
+X
+XX
+*/
+
+.normL { background-color: Yellow; border-color: Yellow; }
+
+/*
+X
+XX
+ X
+*/
+
+.leftBolt { background-color: Green; border-color: Green; }
+
+/*
+X
+XX
+X
+*/
+
+.midT { background-color: Gray; border-color: Gray; }
+
+/*
+ X
+XX
+X
+*/
+
+.rightBolt { background-color: #36368B; border-color: #36368B; }
+
+/*
+XX
+XX
+*/
+
+.quad { background-color: Aqua; border-color: Aqua; }
+
+.fadingTetris {position: absolute; margin-top: -24pt; z-index: 1000; }
